@@ -24,7 +24,7 @@ const labels = {
 };
 
 export const Mentor = () => {
-  const { id,data } = useParams();
+  const { id, data } = useParams();
   const [user, setuser] = useState([]);
   const [users, setusers] = useState([]);
   const [value, setValue] = useState(0);
@@ -54,32 +54,36 @@ export const Mentor = () => {
         ?.classList.toggle("expand", window.scrollY);
       document.querySelector(".bb")?.classList.toggle("shrink", window.scrollY);
     });
-  }, [id,comments]);
-  function lao(){
+  }, [id, comments]);
+  function lao() {
     axios(`https://contioback.herokuapp.com/reviews/${id}`).then((res) => {
       console.log(res);
       setComments(res.data.reviews.reverse());
     });
   }
-  const handleSubmit =()=>{
+  const handleSubmit = () => {
     console.log(x.user._id);
-    axios.post(`https://contioback.herokuapp.com/reviews/${id}`,{
-      description:reviewText,
-      student_id:x.user._id,
-      rating:value
-  }).then((res) => {
-    lao()
-     setReviewText("")
-     setValue(0)
-    });
-  }
+    axios
+      .post(`https://contioback.herokuapp.com/reviews/${id}`, {
+        description: reviewText,
+        student_id: x.user._id,
+        rating: value,
+      })
+      .then((res) => {
+        lao();
+        setReviewText("");
+        setValue(0);
+      });
+  };
 
   console.log(x.user);
   return (
     <>
       <Navbar />
       <MentorStyled>
-        {alertmsg && <div className="alert">Mentor is not available for video call</div>}
+        {alertmsg && (
+          <div className="alert">Mentor is not available for video call</div>
+        )}
         <div className="wrapper">
           <div className="profileInfo">
             <img
@@ -125,15 +129,28 @@ export const Mentor = () => {
                 >
                   Start Chat
                 </div>
-                {user.isOnline ? <a rel="noreferrer" href="http://localhost:4000/?room=Contio_4031113743" target="_blank"><div className="chat">Video Call</div></a> :<div onClick={() => {
-                  // alert("Mentor is not available for Video Call")
-                  setAlertmsg(true)
-                  setTimeout(() => {
-                    setAlertmsg(false)
-                  },800)
-                }}className="chat">
-                  Video Call
-                </div>}
+                {user.isOnline ? (
+                  <a
+                    rel="noreferrer"
+                    href="https://chat.1410inc.xyz/?room=Contio_ac8s7ej8ys"
+                    target="_blank"
+                  >
+                    <div className="chat">Video Call</div>
+                  </a>
+                ) : (
+                  <div
+                    onClick={() => {
+                      // alert("Mentor is not available for Video Call")
+                      setAlertmsg(true);
+                      setTimeout(() => {
+                        setAlertmsg(false);
+                      }, 800);
+                    }}
+                    className="chat"
+                  >
+                    Video Call
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -220,11 +237,16 @@ export const Mentor = () => {
                 return (
                   <li>
                     {/* <span className="avtar">{el.name[0]}</span> */}
-                    <img className="avtar" src={el.student_id.avatar ||`https://joeschmoe.io/api/v1/${el.student_id.name}`} alt="" />
+                    <img
+                      className="avtar"
+                      src={
+                        el.student_id.avatar ||
+                        `https://joeschmoe.io/api/v1/${el.student_id.name}`
+                      }
+                      alt=""
+                    />
                     <span className="n">{el.student_id.name}</span>
-                    <span>
-                     {el.description}
-                    </span>
+                    <span>{el.description}</span>
                   </li>
                 );
               })}
@@ -232,7 +254,7 @@ export const Mentor = () => {
           </div>
 
           <h3 className="h">Similar Tech Mentors</h3>
-          <MyCarousel users={users} id={data}/>
+          <MyCarousel users={users} id={data} />
         </div>
       </MentorStyled>
       <Footer />
