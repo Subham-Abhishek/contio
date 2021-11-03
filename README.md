@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Contio
+#### project for Hackathon.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo Link : <a>https://contio.netlify.app/</a> 
 
-## Available Scripts
 
-In the project directory, you can run:
+#### About the project:
+Contio is a web application that connects Students and Mentors for sharing, gaining knowledge and making friends. Students search for mentors by subject and skills, our main goal is to make education accessible to everyone. As a result, we decided to build Contio, so that working professionals, students, or anyone else who wants to share their knowledge in order to help or improve themselves could engage with children and make them feel comfortable with learning could do so.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contributors
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Subham Abhishek Jaiswal](https://github.com/Subham-Abhishek)
+- [Abhishek Singh](https://github.com/singhabhishek6)
+- [Chandan Gupta](https://github.com/chandan1499)
+- [Kumar Saurav](https://github.com/ks-1007)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionalities Added
+- *Dynamic Login*
+- *Chat Vedio Functionalities*
+- *Create Review Giving Functionalities*
+- *Preview Mentor Functionalities*
+- *Feedback Functionalities*
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+- ***Landing Page :***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ![alt text](https://cdn-images-1.medium.com/max/800/1*EHeqTc2PKWMF7w-Que3dGw.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ***Mentors Page :***
 
-### `npm run eject`
+  ![alt text](https://cdn-images-1.medium.com/max/800/1*zsnSbwy4aS1levx-59yixw.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- ***Mentor Detail Page :***
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ![alt text](https://cdn-images-1.medium.com/max/800/1*_owbeaVNU39EgqQ40ckRkQ.png)
+ 
+ - ***Chat Page :***
+ 
+  ![alt text](https://cdn-images-1.medium.com/max/800/1*E4p0KarHUuOmXFYzzPcUOg.png)
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech-stacks we used for Frontend:
+1. React 
+2. JavaScript
+3. CSS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Tech-stacks we used for Backend:
+1. Express Js (Server - Node js)
+2. Mongodb (Database)
 
-## Learn More
+## Tech libraries used:
+1. Material UI & material icons
+2. Pusher
+3. Socket.io
+4. React Icons
+5. Axios
+6. react-router-dom
+7. Styled Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+Use this command on your **git bash** to clone this project on your Local machine.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/Subham-Abhishek/contio
+```
 
-### Analyzing the Bundle Size
+Use this command after clone for install app dependency and app dependencies version updation.
+```bash
+npm install || npm i || yarn install
+```
+Make sure your system have install ***nodemon*** globally.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# if nodemon not install run this script.
+npm install -g nodemon
+ 
+# or using yarn: 
+yarn global add nodemon
+``` 
 
-### Making a Progressive Web App
+after install nodemon run server on your system.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# for react
+npm run start
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#for backend 
+npm run server
+```
