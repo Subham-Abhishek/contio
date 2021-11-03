@@ -17,8 +17,8 @@ Contio is a web application that connects Students and Mentors for sharing, gain
 
 
 ## Functionalities Added
-- *Dynamic Login*
-- *Chat Vedio Functionalities*
+- *Login & Signup*
+- *Chat Video Functionalities*
 - *Create Review Giving Functionalities*
 - *Preview Mentor Functionalities*
 - *Feedback Functionalities*
@@ -43,9 +43,10 @@ Contio is a web application that connects Students and Mentors for sharing, gain
  
 
 ## Tech-stacks we used for Frontend:
-1. React 
+1. ReactJS
 2. JavaScript
-3. CSS
+3. HTML5
+4. CSS3
 
 ## Tech-stacks we used for Backend:
 1. Express Js (Server - Node js)
